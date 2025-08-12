@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F5F5;
+}
+
+.container {
+    margin: 0 auto;
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #333333;
+    margin: 3rem;
+}
+
+.container .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container #taskName {
+    width: 60%;
+    margin: 1rem;
+    height: 2rem;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: 2px solid #666666;
+    border-radius: 10px;
+}
+
+.container #createTask {
+    width: 30%;
+    padding: 10px;
+    margin: 1rem;
+    height: 3rem;
+    background-color: #FF5722;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.container #createTask:hover {
+    background-color: #FF5722cc;
+    cursor: pointer;
+    border: 2px solid #FF5722;
+}
+
+#tasksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.task {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.normalTask,
+.editTask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.editTask {
+    display: none;
+}
+
+.taskNameContainer i {
+    cursor: grab;
+    text-align: center;
+    margin: 1rem;
+}
+
+.taskNameContainer i:hover{
+    color: #FF5722;
+}
+
+.taskBtns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task span {
+    font-size: 1.5rem;
+}
+
+.editBtn,
+.deleteBtn,
+.confirmEdit {
+    background-color: transparent;
+    border: none;
+    height: 2rem;
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+.editBtn i,
+.deleteBtn i,
+.confirmEdit i {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333333;
+}
+
+.editBtn i:hover,
+.deleteBtn i:hover,
+.confirmEdit i:hover {
+    color: #FF5722;
+}
+
+.editTask input {
+    height: 1.75rem;
+    border-radius: 5px;
+    border: 1px solid #666666;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.normalTask > i,
+.editTask > i {
+    margin: 1rem;
+} 
+
+.blue,
+.red,
+.green,
+.white {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 100%;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+
+.blue { background-color: #00b4d8; }
+.red { background-color: #e63946; }
+.green { background-color: #a7c957; }
+.white { background-color: #e9ecef; }
+
+@media only screen and (min-width: 1800px){
+    .container{
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .container{
+        width: 95vw;
+    }
+
+    .taskNameContainer span{
+        font-size: 1rem;
+    }
+
+    .editBtn i,
+    .deleteBtn i,
+    .confirmEdit i {
+        font-size: 1rem;
+        text-align: center;
+        color: #333333;
+    }
+
+    .editTask input {
+        height: 1.75rem;
+        border-radius: 5px;
+        border: 1px solid #666666;
+        padding: 5px;
+        font-size: 1rem;
+        width: 130px;
+    }
+
+    .blue,
+    .red,
+    .green,
+    .white {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 100%;
+        border: 1.5px solid #000000;
+        cursor: pointer;
+    }
+
+    .taskNameContainer i {
+        display: none;
+    }
+
+}
+
