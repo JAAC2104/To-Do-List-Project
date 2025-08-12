@@ -203,7 +203,7 @@ body {
     }
 
     .taskNameContainer i {
-        display: none;
+        margin: 10px;
     }
 
 }
