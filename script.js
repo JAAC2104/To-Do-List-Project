@@ -24,7 +24,7 @@ const colorMap = {
 loadTasks();
 renderTasks();
 
-addTask.addEventListener("click", () => {
+function createTask(){
     if(taskContent.value != ""){
         let content = taskContent.value;
         let newTask = {
@@ -37,6 +37,14 @@ addTask.addEventListener("click", () => {
         renderTask(newTask);
         taskContent.value = "";
     } else{ alert("Please enter a task")};
+}
+
+addTask.addEventListener("click", createTask)
+
+taskContent.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        createTask();
+    }
 });
 
 //Functions to create, delete and render tasks.
